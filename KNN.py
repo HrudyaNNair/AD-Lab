@@ -16,7 +16,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 a=int(input("Enter the number for k value:")  )
 knn = KNeighborsClassifier(n_neighbors=a)
-print("Number datas for Preiction is:",len(X_test))
+print("Number datas for Prediction is:",len(X_test))
 
 knn.fit(X_train, y_train)
 print("Prediction Accuracy:",knn.score(X_test, y_test))
@@ -34,7 +34,7 @@ print("Confussion Matrix\n",cm)
 import matplotlib.pyplot as plt
 import seaborn as sn
 plt.figure(figsize=(7,5))
-sn.heatmap(cm, annot=True)
+sn.heatmap(cm,cmap="PiYG" annot=True)
 plt.xlabel('Predicted')
 plt.ylabel('Truth')
 
